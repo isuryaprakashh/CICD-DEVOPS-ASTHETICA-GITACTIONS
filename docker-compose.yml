@@ -13,10 +13,11 @@ services:
       - springboot-mysql-net
 
   backend:
-    image: isuryaprakashh/asthetica-docker-backend:latest
+    image: isuryaprakashh/docker-sdp-backend:latest
+    platform: linux/amd64
     container_name: springboot
     ports:
-      - "2025:6969"
+      - "1999:6969"
     depends_on:
       - mysqldb
     restart: on-failure
@@ -24,10 +25,11 @@ services:
       - springboot-mysql-net
 
   frontend:
-    image: suryaprakashh/asthetica-docker-frontend:latest
+    image: isuryaprakashh/docker-sdp-frontend:latest
+    platform: linux/amd64
     container_name: react
     ports:
-      - "3000:80"
+      - "2000:80"
     depends_on:
       - backend
     restart: on-failure
