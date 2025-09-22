@@ -13,7 +13,7 @@ services:
       - springboot-mysql-net
 
   backend:
-    image: isuryaprakashh/docker-backend:latest
+    image: isuryaprakashh/asthetica-docker-backend:latest
     container_name: springboot
     ports:
       - "2025:6969"
@@ -24,7 +24,7 @@ services:
       - springboot-mysql-net
 
   frontend:
-    image: suryaprakashh/docker-frontend:latest
+    image: suryaprakashh/asthetica-docker-frontend:latest
     container_name: react
     ports:
       - "3000:80"
